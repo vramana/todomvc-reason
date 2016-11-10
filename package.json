@@ -1,0 +1,49 @@
+{
+  "name": "todomvc-reason",
+  "version": "0.1.0",
+  "description": "TodoMVC in Reason & BuckleScript",
+  "scripts": {
+    "server": "node server.js",
+    "install": "bash scripts/install.sh",
+    "editor": "eval $(dependencyEnv) && $EDITOR .",
+    "rebel:sh": "eval $(dependencyEnv) && rebel",
+    "rebel": "node scripts/watch.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vramana/todomvc-reason.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vramana/todomvc-reason/issues"
+  },
+  "homepage": "https://github.com/vramana/todomvc-reason#readme",
+  "dependencies": {
+    "@opam-alpha/merlin": "^ 2.5.0",
+    "@opam-alpha/ocaml": "4.2.3",
+    "bs-platform": "git+https://github.com/bloomberg/bucklescript.git",
+    "dependency-env": "git+https://github.com/npm-ml/dependency-env.git",
+    "express": "^4.14.0",
+    "nopam": "git+https://github.com/yunxing/nopam.git",
+    "ocamlBetterErrors": "0.0.10",
+    "realpath": "*",
+    "reason": "git+https://github.com/facebook/reason.git",
+    "rebel": "github:vramana/rebel-bin#bin-2be022c5697a05c8bd1be9d565224e1bf8fbef8f-linux",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-middleware": "^1.8.4"
+  },
+  "rebel": {
+    "targets": [
+      {
+        "target": "client",
+        "entry": "src/reason/client.re",
+        "engine": "bucklescript"
+      }
+    ]
+  },
+  "main": "server.js",
+  "devDependencies": {}
+}
